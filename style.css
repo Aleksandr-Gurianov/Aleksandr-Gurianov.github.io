@@ -1,0 +1,37 @@
+body{
+    margin:0 auto;
+    padding:30px;
+    color:#333;
+    font-size:18px;
+    font-family:serif;
+    line-height:1.5;
+    background-color:#ebebeb;
+  }
+  
+  p{
+    margin-top:0;
+  }
+  
+  .columns{
+    column-width:250px;
+    column-count:2;
+    column-gap:30px;
+    column-rule:2px solid black;
+  }
+  
+  .columns > h2{
+    text-align: center;
+    column-span: all;
+  }
+  
+  .img{
+    max-width: 100%;
+    height: auto;
+    
+    vertical-align: middle;
+  }
+  
+  figure {
+    border: 1px solid;
+    break-inside: avoid;
+  }
