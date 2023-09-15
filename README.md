@@ -5,14 +5,12 @@
   <img  src="https://media.giphy.com/media/xT0Gqn9yuw8hnPGn5K/giphy.gif" width="300"/>
 </div>
 <div id="badges" align='center'>
-  <a href="https://wa.me/79955007771">
-    <img src="https://img.shields.io/badge/whatsapp-white?style=for-the-badge&logo=whatsapp&logoColor=green" alt="WhatsApp Badge">
-  </a>
+  
   <a href="https://t.me/bolden_gold">
     <img src="https://img.shields.io/badge/telegram-blue?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Badge"/>
 
   </a>
-  <a href="gyryanovalexander@gmail.com">
+  <a href="mailto:gyryanovalexander@gmail.com">
     <img src="https://img.shields.io/badge/gmail-white?style=for-the-badge&logo=gmail&logoColor=red" alt="Gmail Badge"/>
   </a>
 </div>
