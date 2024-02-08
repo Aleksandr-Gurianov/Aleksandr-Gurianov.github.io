@@ -1,0 +1,156 @@
+.hero {
+
+  margin-top: 40px;
+
+  @include mobile-2 {
+    width: 94%;
+    margin: 20px 3%  0 3%;
+  }
+
+    .swiper {
+      // width: 1280px;
+      height: 260px;
+      border-radius: 8px;
+      background: #0C0C0C;
+      color: wheat;
+
+      &-wrapper-hero{
+        @include mobile {
+          width: 90%;
+          margin: 0 auto;
+        }
+
+        @include mobile-2 {
+          width: 100%;
+        }
+      }
+
+      @include mobile {
+        width: auto;
+        // margin: 0 20px;
+        background: transparent;
+
+
+      .swiper-button-prev-custom,
+      .swiper-button-next-custom{
+        display: none;
+      }
+
+      }
+
+      .swiper-slide-hero {
+        @include mobile {
+          width: 100% !important;
+          background: #0C0C0C;
+
+        }
+      }
+
+      .swiper-button-prev-custom,
+      .swiper-button-next-custom {
+        
+        &::after {
+          font-size: 20px;
+          padding: 16px 20px;
+          color: #C1C1C1;
+
+          text-transform: none!important;
+          letter-spacing: 0;
+          font-variant: initial;
+          line-height: 1;
+          border-radius: 100px;
+          border: 2px solid #C1C1C1;
+        }
+      }
+
+      .swiper-button-prev-custom {
+        margin-left: 24px;
+      }
+      .swiper-button-next-custom {
+        margin-right: 24px;
+      }
+
+      .swiper-box {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+        gap: 50px;
+
+        @include mobile {
+          gap: 20px;
+          flex-direction: column;
+          width: 100%;
+          margin-top: 10px;
+
+        }
+
+        .swiper__img {
+          align-self: center;
+          position: relative;
+
+          img{
+            margin-bottom: -50px;
+
+            @include mobile{
+              margin-bottom: 0px;
+
+              width: 200px;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+      .swiper__text {
+        // justify-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        .swiper__header{
+          color: #FFF;
+          font-family: 'Roboto', sans-serif;
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+
+          @include mobile {
+            font-size: 25px;
+            // margin-left: 20px;
+            text-align: center;
+          }
+        }
+
+        .swiper__description {
+          color:  #DEDEDE;
+          font-family: 'Roboto', sans-serif;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140.188%;
+
+          @include mobile {
+            font-size: 18px;
+            // margin-left: 20px;
+            text-align: center;
+            padding: 0 5px;
+          }
+          
+          span {
+            color: #EBBA1A;
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140.188%; /* 44.86px */
+
+            @include mobile {
+              font-size: 22px;
+              // padding: 0 5px;
+            }
+          }
+        }
+      }
+     }
+}

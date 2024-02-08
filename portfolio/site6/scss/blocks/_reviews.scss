@@ -1,0 +1,151 @@
+.reviews {
+    margin: 40px 0 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include desktop {
+        padding: 0 20px;
+    }
+
+    h4{
+        color: var(--, #0C0C0C);
+
+        /* h6/32 regular */
+        font-family: 'Roboto', sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__hrefs {
+        display: flex;
+        gap: 20px;
+
+        a{
+            color: var(--, #454545);
+
+            /* h1/20 regular */
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    &__people {
+        background-color: #BCC5FF;
+        padding: 20px 0px 20px 16px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 17px;
+        
+        
+
+        @include mobile-2 {
+            padding: 20px 20px 20px 16px;
+
+        }
+        
+        .rating {
+            display: flex;
+            gap: 16px;
+            justify-content: flex-start;
+            align-items: center;
+            
+            .count {
+                color: #0C0C0C;
+                font-family: 'Roboto', sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 28px; /* 140% */
+                
+            }
+
+            .stars {
+                display: flex;
+                align-items: center;
+                column-gap: 8px;
+            }
+        }
+
+        .swiper-slide-review-people {
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+            background: #F6F6F6;
+            gap: 12px;
+
+            @include desktop {
+                height: 270px;
+            }
+
+            @include mobile-2 {
+                // width: 96% !important;
+                margin: auto;
+            }
+
+            .info__person {
+                display: flex;
+                gap: 12px;
+                margin: 23px;
+
+                &-data{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 4px;
+                    
+                    .name {
+                        color:  #454545;
+
+                        /* h2/16 light */
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 20px; /* 125% */
+                    }
+
+                    .date {
+                        color:  #0C0C0C;
+
+                        /* h2/16 light */
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: normal;
+                    }
+                }
+
+                .stars {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 8px;
+                }
+            }
+
+            .text {
+                color:  #454545;
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 24px;
+                margin-left: 23px;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                padding-bottom: 23px;
+                
+                & .variant{
+                    font-weight: 600;
+                    
+                }
+            }
+        }
+    }
+}
