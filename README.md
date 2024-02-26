@@ -21,7 +21,7 @@
 </div>
 
 <h1 align='center'>
-  Hello, thanks You for visiting My page
+  Hello, thanks You fo visiting My page
   <img src="https://media.giphy.com/media/SSJYIjDeLmVbrMVEeh/giphy.gif" alt="Business gif"  width='50px'>
 </h1>
 
