@@ -1,0 +1,137 @@
+.circle {
+    position: absolute;
+    max-width: 1424px;
+    max-height: 1416px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: -250px;
+    right: -400px;
+
+    @include desktops {
+        // right: -600px;
+        right: -45%;
+    }
+
+    // svg {
+    //     object-fit: cover;
+    //     width: 100%;
+    //     height: 100%;
+    // }    
+}
+
+
+
+
+.planets {
+    position: absolute;
+    display: block;
+    max-width: 1024px;
+    top: 560px;
+    max-height: 350px;
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+    right: 100px;
+
+    // @include desktops {
+    //     max-width: 60%;
+    //     height: auto;
+    //     right: 7%;
+    // }
+    @include desktops {
+        // right: -300px;
+        // right: -30%;
+        max-width: 100%;
+        right: -37%;
+        top: 570px;
+    }
+
+    svg {
+        object-fit: contain;
+
+    }
+}
+
+.circlePlanets {
+    display: none;
+
+    @include mobile {
+        display: none !important;
+    }
+}
+
+// @media screen and (max-width: 1426px) {
+//     .planets {
+//         max-width: 60%;
+//         border: 1px solid #fff;
+//         right: 7%;
+//         // bottom: 56%;
+//         top: 56%;
+//         // top: 560px;
+
+//         // max-height: 600px;
+//         // top: 560px;
+        
+//         svg {
+//             max-width: 100%;
+//             width: 40%;
+//             height: auto;
+//         }
+
+//     }
+
+//     .circle {
+//         max-width: 95%;
+//         height: auto;
+//         right: -36%;
+//         // top: -60px;
+//         top: -10%;
+
+//         svg {
+//             max-width: 100%;
+//             width: 100%;
+//             height: auto;
+//         }
+//     }
+// }
+
+
+@media screen and (max-width: 1185px) {
+    .planets {
+        display: none;
+    }
+    .circle {
+        display: none;
+    }
+
+    .circlePlanets {
+        display: block;
+        position: absolute;
+        // top: -430px;
+        top: -30%;
+        right: -420px;
+        // right: -42%;
+        // z-index: 10;
+        max-width: 2200px;
+        max-height: 2200px;
+        width: 100%;
+        height: auto;
+        z-index: 3;
+        min-width: 818px;
+
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+    }
+}
+
+// @media screen and (max-width:480px) {
+//     .circlePlanets {
+//         display: none;
+//     } 
+// }

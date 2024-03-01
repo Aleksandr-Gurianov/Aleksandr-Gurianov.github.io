@@ -1,0 +1,195 @@
+section:has(header) {
+    
+    &::before {
+        position: absolute;
+        content: '';
+        background: url('../images/header/bg_left.svg');
+        width: 486px;
+        height: 1565px;
+        left: 0;
+        top: 0;    
+
+        @include tablet {
+            width: 411px;
+            z-index: 2;
+        }
+
+        // @include mobile {
+        //     width: 197px;
+        //     height: 1137px;
+        // }
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        background: url('../images/header/bg_right.svg');
+        width: 630px;
+        height: 1295px;
+        right: 0;
+        top: 0; 
+        @include tablet {
+            width: 319px;
+            height: 1007px;
+            z-index: 2;
+        }
+
+        @include mobile{
+            width:133px;
+            height:886px;
+        }
+
+    }
+}
+
+header {
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 28px;
+    // padding: 0 72px;
+
+    position: relative;
+    
+    z-index: 3;
+
+    @include desktops {
+        padding: 0 20px;
+    }
+
+    @include tablet {
+        padding: 0 25px;
+    }
+
+    @include mobile {
+        width: auto;
+        z-index: 99;
+        margin-top: 0;
+        padding: 0 0 0 25px;
+    }
+
+    
+
+    .logo {
+        display: flex;
+        gap: 25px;
+        align-items: end;
+
+        @include tablet {
+            gap: 10px;
+        }
+
+        @include mobile {
+            flex-grow: 1;
+        }
+
+        &__text {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 5px;
+            position: relative;
+            svg {
+                z-index: 2;
+                &:last-child{
+                    margin-bottom: 6px;
+                }                
+            } 
+
+            &::before {
+                z-index: 1;
+                position: absolute;
+                content: '';
+                top: 16px;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                // transform: translate(0,70%);
+                background-image: url('../images/header/Ellipse1.svg');
+            }
+
+            &::after {
+                z-index: 1;
+                position: absolute;
+                content: '';
+                top: 15px;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                // transform: translate(0,70%);
+                background-image: url('../images/header/Ellipse2.svg');
+            }
+        }
+
+               
+    }
+
+    nav {
+        display: flex;
+        z-index: 5;
+
+        ul{
+            list-style-type: none;
+            display: flex;
+            gap: 76px;
+            @include tablet {
+                gap: 16px;
+            }
+
+            li {
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 20px;
+                    font-weight: 400;
+
+                    @include tablet {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    button {
+        background: url('../images/header/button.svg');
+        width: 196px;
+        height: 54px;
+        border: none;
+        box-shadow: none;        
+        color: #fff;
+        margin-right: 38px;
+        z-index: 5;
+
+        @include desktops {
+            margin-right: none;
+        }
+
+        @include tablet {            
+        width: 149px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        // height: auto;
+        // border: none;
+        // box-shadow: none;
+        // color: #fff;
+        // margin-right: 38px;
+        font-size: 14px;
+        }
+
+        @include mobile {
+            margin-right: auto;
+        }
+    }
+}
