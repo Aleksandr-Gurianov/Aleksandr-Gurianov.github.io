@@ -902,4 +902,15 @@ section:has(.hero)::before {
   .first {
     left: 12%;
   }
+}
+#heroTitle .word {
+  transform: translateX(-115px);
+  opacity: 0;
+  transition: transform 1s opacity 1.5s;
+}
+
+#heroDescription .line {
+  transform: translateY(90px);
+  opacity: 0;
+  transition: transform 1s opacity 1s;
 }/*# sourceMappingURL=main.css.map */

@@ -32,4 +32,44 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
 
+  if (innerWidth <= 768 ) {
+    heroBlock.append(firstImg);
+    heroBlock.append(secondImg);
+    heroBlock.append(thirdtImg);
+    heroBlock.append(apps);
+}
+///Animation
+//   gsap.registerPlugin(TextPlugin);
+
+// const heroTitle = new SplitType('#heroTitle')
+const heroTitle = SplitType.create('#heroTitle');
+const heroTitleMain = SplitType.create('#heroTitleMain');
+if(heroTitle){
+  gsap.to('.word', {
+    x:0,
+    opacity:1,
+    stagger:0.1,
+    delay:0.2,    
+    duration: 1.25,
+  });
+}
+
+const heroDescription = SplitType.create('#heroDescription');
+if(heroDescription){
+  gsap.to('.line', {
+    y:0,
+    opacity:1, 
+    stagger:0.3,
+    delay:0.5,
+    duration:1, 
+  })
+}
+
+
+  
+
+
+
+
+
 
