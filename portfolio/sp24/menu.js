@@ -55,36 +55,57 @@ const catalogSlider = new Swiper('.catalogSlider', {
   speed: 6000,
   on: {
     init() {
-      
-      this.el.addEventListener('mouseenter', () => {        
-        this.autoplay.stop();
-        this.params.speed=300;
-      });
-      this.el.addEventListener('mouseleave', () => {       
-        this.params.speed=6000; 
-        this.autoplay.start();
-      });
 
-      this.el.addEventListener('touchstart', () => {  
+      if(window.innerWidth > 768){
+        this.el.addEventListener('mouseenter', () => {        
+          this.autoplay.stop();
+          this.params.speed=300;
+        });
+        this.el.addEventListener('mouseleave', () => {       
+          this.params.speed=6000; 
+          this.autoplay.start();
+        });
+      }
+      
+      
+
+      // this.el.addEventListener('touchstart', () => {  
            
-        this.autoplay.stop();
-        this.params.speed=300;
-      });
+      //   this.autoplay.stop();
+      //   this.params.speed=300;
+      // });
       // this.el.addEventListener('touchmove', () => {  
       //   console.log('ok')      
       //   this.autoplay.stop();
       //   this.params.speed=300;
       // });
 
-      this.el.addEventListener('touchend', () => {       
-        this.params.speed=6000; 
-        this.autoplay.start();
-      });
+      // this.el.addEventListener('touchend', () => {       
+      //   this.params.speed=6000; 
+      //   this.autoplay.start();
+      // });
       // this.el.addEventListener('touchcancel', () => {       
       //   this.params.speed=6000; 
       //   this.autoplay.start();
       // });
 
+    },
+    // touchMove(){
+    //   this.autoplay.stop();
+    //   this.params.speed=300;
+    //   setTimeout(()=> {
+    //     this.params.speed = 6000;
+    //     this.autoplay.start();
+    //   }, 2000);
+    // },
+    touchStart(){
+      this.autoplay.stop();
+      this.params.speed=300;
+      setTimeout(()=> {
+        this.params.speed = 6000;
+        this.autoplay.start();
+        console.log(5)
+      }, 5000);
     },
 
     // touchEnd(){
