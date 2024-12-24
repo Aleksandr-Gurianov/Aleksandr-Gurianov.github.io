@@ -65,19 +65,25 @@ const catalogSlider = new Swiper('.catalogSlider', {
         this.autoplay.start();
       });
 
-      this.el.addEventListener('touchmove', () => {        
+      this.el.addEventListener('touchstart', () => {  
+           
         this.autoplay.stop();
         this.params.speed=300;
       });
+      // this.el.addEventListener('touchmove', () => {  
+      //   console.log('ok')      
+      //   this.autoplay.stop();
+      //   this.params.speed=300;
+      // });
 
       this.el.addEventListener('touchend', () => {       
         this.params.speed=6000; 
         this.autoplay.start();
       });
-      this.el.addEventListener('touchcancel', () => {       
-        this.params.speed=6000; 
-        this.autoplay.start();
-      });
+      // this.el.addEventListener('touchcancel', () => {       
+      //   this.params.speed=6000; 
+      //   this.autoplay.start();
+      // });
 
     },
 
@@ -123,19 +129,14 @@ const catalogSliderReverse = new Swiper('.catalogSliderReverse', {
         this.autoplay.start();
       });
 
-      this.el.addEventListener('touchstart', () => {        
+      this.el.addEventListener('touchstart', () => {  
+            
         this.autoplay.stop();
-      });
-      this.el.addEventListener('touchMove', () => {        
-        this.autoplay.stop();
+        this.params.speed=300;
       });
 
-      this.el.addEventListener('touchEnd', () => {       
-        
-        this.autoplay.start();
-      });
-      this.el.addEventListener('touchCancel', () => {       
-        
+      this.el.addEventListener('touchend', () => {       
+        this.params.speed=6000; 
         this.autoplay.start();
       });
     }
@@ -202,15 +203,19 @@ const reviewsPagEnd = document.querySelector('.pagination-reviews .span-end');
         slidesPerView: 1,
         spaceBetween: 20,
       },
-      500: {
-        slidesPerView: 2,
+      560: {
+        slidesPerView: 1.6,
         spaceBetween: 20,
       },
-      800: {
+      768: {
+        slidesPerView: 2.4,
+        spaceBetween: 20,
+      },
+      900: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
-      1000: {
+      1200: {
         slidesPerView: 4,
         spaceBetween: 20,
       }
