@@ -1,0 +1,30 @@
+.our_partners {
+    margin-top: 40px;
+}
+.partnersSlider {
+
+
+    .swiper-wrapper{
+        transition-timing-function : linear;
+        
+
+        // .swiper-slide {
+        //     width:  250px;
+
+        // }
+    }
+}
+
+.lettersSwiper {
+    margin: 40px auto;
+
+    .swiper-wrapper {
+
+        .swiper-slide {
+            width: auto;
+            img {
+                width: 220px;
+            }
+        }
+    }
+}

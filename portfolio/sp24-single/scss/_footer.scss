@@ -1,0 +1,193 @@
+.footer{
+    margin: 40px auto;
+    display: grid;
+    
+    gap: 20px;
+
+    @media screen and (min-width:1024px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @media screen and (max-width:1024px) and (min-width:600px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width:600px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        &-title{
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        &-logo{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+
+            .line {
+                width: 15px;
+                height: 100%;
+                background-color: var(--primary-color-hover);
+            }
+        }
+
+        &-contacts {
+
+            .small {
+                font-size: 14px;
+
+                &:last-child{
+                    margin: 5px 0 10px;
+                }
+            }
+            
+            &-text {
+                font-size: 18px;
+                line-height: 1.2;
+                
+            }
+
+        }
+
+        &-socials{
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        &-list{
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+
+            li{
+
+                
+                a{
+                    color: #333;
+                    transition: color .3s ease-in-out;
+                    text-decoration: underline;
+
+                    &:hover{
+                        color: var(--primary-color-hover);
+                    }
+                }
+
+            }
+
+            
+        }
+    }
+
+    &-bottom{
+        border-top: 1px solid black;
+        
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-top: 40px;
+
+            @media screen and (max-width:768px) {
+                flex-direction: column;
+            }
+        }
+
+        &-row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            @media screen and (max-width:768px) {
+                flex-direction: column;
+                align-items:center;
+            }
+
+            &-copyright{
+                display: flex;
+                gap: 20px;
+                align-items: start;
+
+                @media screen and (max-width:768px) {
+                    flex-direction: column;
+                    align-items:center;
+                }
+
+                .years {
+                    font-weight: 400;
+                }
+
+                p {
+                    font-weight: 500;
+                }
+            }
+
+            &-icons{
+                display: inline-flex;
+                gap: 20px;
+                align-items: start;
+            }
+        }
+
+            .more-raions{             
+                position: relative;
+                margin-bottom: 0px;
+                transition: margin-bottom .5s linear;
+
+                &:has(.read-more-check:checked){
+                    margin-bottom: 40px;
+                }
+
+
+
+                .read-more-label{
+                    bottom: unset;
+                    bottom: 0;
+                    padding: 10px 40px 10px 0px;
+                    color: #333;
+                    background-color: transparent;
+                    box-shadow: none;
+                    transition: color .3s linear, bottom .5s linear;
+
+                    &:hover{
+                        color: var(--primary-color-hover);
+                    }
+
+                    &::before {
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(51, 51, 51, 1);transform: ;msFilter:;'%3E%3Cpath d='M21.886 5.536A1.002 1.002 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13a.998.998 0 0 0 1.644 0l9-13a.998.998 0 0 0 .064-1.033zM12 17.243 4.908 7h14.184L12 17.243z'%3E%3C/path%3E%3C/svg%3E");
+                    }
+
+                    &::after {
+                        content: 'Работаем в районах';
+                        text-transform: none;
+                      }
+
+                      
+                      
+                }
+
+                .read-more-check:checked ~ .read-more-label{
+                    bottom: -50px;
+                    :after {
+                        content: 'Скрыть районы';
+                      }
+                }
+
+                
+            }
+    }
+}
+
+
+
+

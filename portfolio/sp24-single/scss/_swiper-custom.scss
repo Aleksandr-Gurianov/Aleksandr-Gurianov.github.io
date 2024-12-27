@@ -1,0 +1,132 @@
+
+.my-controls {
+  display: flex;
+  align-items: center;
+  padding: 18px 0;
+
+  &.fixed-width {
+    padding: 0;
+  }
+
+  @media screen and (max-width:600px) {
+    flex-direction: column;
+  }
+
+
+  .my-navigation {
+    position: relative;
+    width: 120px;
+    height: 50px;
+    // height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width:960px) and (min-width:600px) {
+      width: 180px;
+    }
+
+    @media screen and (max-width:600px) {
+      margin-top: 25px;
+    }
+
+    &.fixed-width {
+      width: fit-content;
+      
+      height: 100%;
+      align-items: unset;
+    }
+
+    .swiper-button-next {
+      border: 1px solid var(--primary-color);
+      padding: 25px;
+      border-radius: 50%;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      right: unset;
+
+
+    }
+    .swiper-button-prev {
+      border: 1px solid var(--primary-color);
+      padding: 25px;
+      border-radius: 50%;
+      position: relative;
+      top: unset;
+      top: 50%;
+      transform: translateY(-50%);
+      left: unset;    
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+      transition: background-color .3s ease-in-out;
+    }
+
+    .swiper-button-next:hover, .swiper-button-prev:hover {
+      background-color: var(--primary-color-hover);
+    }
+    .swiper-button-next:after, .swiper-button-prev:after {
+      color: var(--swiper-navigation-color, var(--primary-color));
+    }
+  }
+
+  .my-pagination {
+    display:flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    z-index:2;
+    // padding:1em;
+    width: calc(100% - 120px);
+    margin-left: 110px;
+
+    @media screen and (max-width:960px) and (min-width:600px) {
+      
+      width: calc(100% - 180px);
+    }
+
+
+    @media screen and (max-width:600px) {
+      width: calc(100%);
+      margin-left:0px;
+    }
+    span {
+      width:42px;
+      height:4px;
+      margin-right:2px;
+      background:var(--primary-color-hover);
+
+       &.span-active{
+        background:var(--primary-color);
+      }
+    }
+  }
+}
+
+
+  
+.swiper-button-prev.swiper-park-button-prev,
+.swiper-button-next.swiper-park-button-next {
+  border: 1px solid var(--primary-color);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;  
+  transform: none !important;
+
+  &::after {
+    color:var(--primary-color);
+  }
+}
+
+.swiper-button-prev.swiper-park-button-prev {
+  left: 0;
+
+  &::after {
+
+  }
+}
+
+.swiper-button-next.swiper-park-button-next {
+  right: 0;
+}

@@ -1,0 +1,148 @@
+.our__park {
+    // display: flex;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    position: relative;
+
+    .my-controls-prev{
+        position: absolute;
+        top: 45%;
+        left: 0px;
+
+        @media screen and (max-width:1200px) {
+            left: 10px;
+        }
+    }
+    .my-controls-next{
+        position: absolute;
+        top: 45%;
+        right: 0;
+
+            @media screen and (max-width:1200px) {
+                right: 10px;
+            }
+    }
+
+    .my-controls .my-navigation .swiper-button-prev {
+        position: absolute;
+    }
+
+}
+
+.parkSlider {
+    // max-width: 1320px;
+    max-width: calc(100% - 104px - 10px);
+    width: 100%;    
+    // padding-right: 10px;
+    overflow: hidden;
+
+    @media screen and (max-width:1300px) {
+        // max-width: 00px;
+    }
+    .swiper-wrapper {
+        // padding-top: 40px;
+        margin-bottom: 20px;
+        transition-timing-function: linear;
+
+        .swiper-slide {
+            width: auto;
+        }
+        
+        &:hover{
+
+
+                @media screen and (min-width:768px) {
+                    & .product-card-wrapper{
+                        opacity: 0.8;
+                        filter: brightness(0.9) contrast(0.9);
+                        transition: opacity .4s ease-in-out, filter .4s ease-in-out;
+    
+                        &:hover {
+                            opacity: 1;
+                            filter: brightness(1);
+                        }
+                    } 
+                }            
+                
+            }
+    }
+    
+}
+
+
+.product {
+    
+
+    &-card-wrapper {
+        
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px inset, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px inset;;
+
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 10px);
+        margin-top: 5px;
+        padding-bottom: 20px; 
+        
+        
+        img{
+            width: 100%;
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            margin: 0 20px;
+
+            .truck-title {
+                text-align: center;
+                height: 50px;
+                font-size: 16px;
+                line-height: 1.2;
+                font-weight: 500;
+                margin-top: 10px;
+            }
+
+            .prices {
+                display: flex;
+                margin: 30px 0px;
+                justify-content: space-between;
+
+                &-item-variants-shift {
+                    font-size: 14px;
+                    line-height: 1.2;
+                    color: rgba(51, 51, 51, 0.7);
+                    font-weight: 500;
+                }
+
+                &-item-variants-costs-block {
+                    margin-top: 10px;
+                    .from {
+                        color: var(--primary-color-hover);
+                        font-size: 14px;
+                        line-height: 1.2;
+                        font-weight: 600;
+                    }
+
+                    .price-for {
+                        font-size: 16px;
+                        line-height: 1.2;
+                        font-weight: 600;
+                        color: var(--primary-color) ;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+    
+
+
+
+.product-card-wrapper {
+    transition: opacity 0.3s ease-in-out;
+}

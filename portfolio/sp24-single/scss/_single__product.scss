@@ -1,0 +1,158 @@
+.single__product{
+
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+
+    @media screen and (max-width:1280px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-image{
+        max-width: 650px;
+        height: 350px;
+        width: 100%;
+        display: flex;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+
+        }
+    }
+
+    &-info{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1.3fr 1.7fr;
+        gap: 40px;
+
+       @media screen and (min-width:1280px) {
+            grid-template-columns: 1.3fr 1.7fr;
+        }
+       @media screen and (max-width:1280px) {
+            grid-template-columns: 1fr;
+            max-width: 650px;
+
+            .btn.btn-product {
+                width: 100%;
+                max-width: unset;
+                text-align: center;
+            }
+        }
+
+
+        &-parametrs{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            list-style-type: none;
+            height: fit-content;
+
+
+            li {
+                display: inline-flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .paramentrs-text{
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 1.2;
+                }
+    
+                .paramentrs-value{
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 1.2;
+                }
+
+            }
+           
+        }
+
+        &-prices {
+            background-color: #f7f7f7;
+            padding: 20px 30px;
+            border-bottom: 5px solid #f5c822;
+            border-top: 5px solid #f5c822;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            
+
+            @media screen and (min-width:1280px) {
+                grid-column: 2 / 3;
+                grid-row: 1 / 3;
+            }
+
+            .arenda {
+                font-size: 1.5rem;
+            }
+
+            &-smena{
+                display: inline-flex;
+                flex-direction: column;
+                gap: 2px;
+                align-items: flex-start;
+
+                .name-of-type{
+                    font-size: 1rem;
+                    line-height: 0.9;
+                    font-weight: 300;
+                }
+
+                .count {
+                    font-weight: 700;
+                    font-size: 26px;
+                }
+
+                
+            }
+
+            .call-to-us{
+                font-size: 24px;
+            }
+
+            .phone{
+                color: var(--primary-color);
+                text-decoration: none;
+                font-size: 24px;
+                width: fit-content;
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                justify-content: start;
+                transition: color .3s ease-in-out;
+
+
+                .product-phone-icon{
+                    width:25px;
+                    height: 25px;
+                    fill: var(--primary-color);
+                    transition: fill 0.3s ease-in-out;
+                }
+
+
+                &:hover{
+                    color: red;
+
+                    .product-phone-icon{
+                    fill: red;
+                    }
+
+                }
+
+                
+            }
+        }
+        
+    }
+
+    &-partner{
+        margin-bottom: 40px;
+    }
+}

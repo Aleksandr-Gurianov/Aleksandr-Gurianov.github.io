@@ -1,0 +1,91 @@
+.benefits {
+    display: flex;
+    background-color: #fff;
+    gap: 30px;
+
+    padding: 20px 20px 10px;
+    margin-top: -50px;
+    max-width: 1200px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    @media screen and (max-width:940px) and (min-width: 420px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+    }
+    @media screen and (max-width: 420px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }
+
+    &-item {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 25%;
+        padding-right: 20px;
+        @media screen and (max-width: 420px) {
+            align-items: center;
+        }
+        
+        @media screen and (min-width:940px) {
+            &:not(:last-child){
+                border-right: 1px solid #bdbdbd;
+            }
+        }
+
+        @media screen and (max-width: 420px) {
+            width: 100%;
+
+            padding: 20px 0;
+            text-align: center;
+
+            &:first-child{
+                border-bottom: 1px solid #bdbdbd;
+            }
+            &:nth-child(2), &:nth-child(3){
+                border-bottom: 1px solid #bdbdbd;
+            }
+        }
+
+        @media screen and (max-width:940px) and (min-width: 420px){
+            width: 100%;
+            &:nth-child(odd){
+                border-right: 1px solid #bdbdbd;               
+                
+            }
+
+            &:first-child {
+                border-bottom: 1px solid #bdbdbd;
+                padding: 0px 30px 30px 0;
+            }
+            &:last-child {
+                // border-top: 1px solid #bdbdbd;
+                padding: 30px 0px 0px 30px;
+            }
+
+            &:nth-child(3){
+                padding: 30px 0 30px 0;
+            }
+            &:nth-child(2){
+                padding: 0px 0px 30px 30px;
+                border-bottom: 1px solid #bdbdbd;
+            }
+            
+                
+            
+        }
+
+        
+
+        p{
+            font-size: 16px;
+            font-weight: 400;
+            color: #333;
+        }
+    }
+}

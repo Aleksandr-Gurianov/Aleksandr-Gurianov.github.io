@@ -1,0 +1,16 @@
+.single__title{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    h1 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .stars{
+        display: inline-flex;
+        gap: 5px;
+    }
+}

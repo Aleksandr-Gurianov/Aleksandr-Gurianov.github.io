@@ -1,0 +1,108 @@
+.form__rent {
+    background-color: var(--primary-color-hover);
+    border-radius: 8px;
+    display: flex;
+    padding: 40px 50px 20px; 
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    &:has(.single__product-form){
+        margin-bottom: 40px;
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+        fieldset {
+            display: flex;
+            outline: none;
+            border: none;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+            @media screen and (max-width:1024px) {
+                flex-direction: column;
+            }
+
+            &.flex-end{
+                align-items: flex-end;
+
+                & .form__rent-form-phone{
+                    max-width: unset;
+                }
+            }
+
+            & + fieldset {
+                margin-top: 30px;
+                
+                .checkbox-container {
+                    margin-top: 0;
+                }
+            }
+    
+        }
+
+        &.single__product-form{
+
+            
+
+            .form__rent-form-name,
+            .form__rent-form-phone{
+                max-width: unset;
+            }
+
+            & .btn {
+                min-width: 400px;
+            }
+        }
+
+        
+        &-choise, &-date, &-phone,&-name {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            width: 100%;
+
+
+            input {
+                width: 100%;
+                display: inline-flex;
+                border: none;
+                outline: 1px solid transparent;
+                font-family: var(--font-family);
+                
+                line-height: 1.2;
+                color: #333;
+                font-size: 18px;
+                padding: 15px 15px 15px 20px;
+                cursor: pointer;
+                text-align: left;   
+
+                &:focus, &:active {
+                    border: none;
+                    outline: 1px solid var(--primary-color);
+                }
+                
+                
+                
+            }
+
+            label {
+                margin-bottom: 10px;
+                font-size: 14px;
+                font-weight: 300;
+            }
+
+            
+        }
+    }
+
+    
+}

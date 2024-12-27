@@ -1,0 +1,48 @@
+.reviewsSwiperSingle {
+
+
+    .swiper-wrapper {
+
+        .swiper-slide {
+            width: auto;
+            height: auto;
+
+            &-review-single-wrapper{
+                max-width: 463px;
+                width: 100%;
+
+                @media screen and (max-width:600px) {
+                    max-width: 300px;
+                }
+
+                box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+                padding: 20px 40px;
+                border-radius: 15px;
+                height: 100%;
+                margin-left: 1px;
+
+                .person-name {
+                    font-weight: 700;
+                    font-size: 1rem;
+                    line-height: 1.2;
+                }
+
+                .date {
+                    font-size: 14px;
+                    line-height: 1.2;
+                    color: rgba(51, 51, 51, 0.7);
+                    font-weight: 500;
+                    line-height: 1.2;
+                }
+
+                .text {
+                    margin-top: 40px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 1.2;
+                }
+                
+            }
+        }
+    }
+}

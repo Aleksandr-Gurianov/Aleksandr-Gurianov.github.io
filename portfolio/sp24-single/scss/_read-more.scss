@@ -1,0 +1,77 @@
+
+  .read-more-check {
+    display: none;
+  }
+  .read-more-label:before {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(255, 255, 255, 1);transform: ;msFilter:;'%3E%3Cpath d='M21.886 5.536A1.002 1.002 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13a.998.998 0 0 0 1.644 0l9-13a.998.998 0 0 0 .064-1.033zM12 17.243 4.908 7h14.184L12 17.243z'%3E%3C/path%3E%3C/svg%3E");
+    top: 0%;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 10px;
+    font-size: 1rem;
+    transform: rotate(0deg) translate(0%, 40%) scale(0.8);
+    transition: top .3s ease-in-out, transform .3s ease-in-out;
+  }
+  .read-more-check:checked ~ .read-more-label:before {
+    top: 0;
+    transform: rotate(180deg) translate(0, -30%) scale(0.8);
+  }
+  .read-more-label:after {
+    content: 'Показать текст';
+    text-transform: none;
+  }
+  .read-more-check:checked ~ .read-more-label:after {
+    content: 'Скрыть текст';
+  }
+  .read-more-label {
+    position: absolute;
+    display: inline-flex;
+    left: 0;
+    width: fit-content;
+    bottom: -30px;
+    padding: 10px 40px 10px 18px;
+    // min-width: calc(100% + 150px);
+    background-color: var(--primary-color);
+    color: #fff;
+    text-shadow: 0 0.1rem 0.3rem rgba(255, 255, 255, 0.3);
+    text-align: center;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0.15rem 0.3rem rgba(0, 0, 0, 0.4);
+    transition: background-color .3s linear, bottom .2s linear .3s;
+  }
+  .read-more-check:checked ~ .read-more-label {
+    bottom: -50px;
+  }
+  .read-more-label:hover {
+    background-color: var(--primary-color-hover);
+  }
+  /*
+    The styles above aren't related with the functionality
+  */
+  .read-more {
+    margin-top: 20px;
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    transition: max-height .5s linear;
+  }
+  /*
+  The down side of this approach is that you have to know what will be the max-height in advance
+  */
+ 
+  @media screen and (min-width: 1200px) {
+     .read-more-check:checked ~ .read-more{
+      max-height: 1000px;
+    }
+    
+     
+  }
+  @media screen and (max-width:1200px) {
+     .read-more-check:checked ~ .read-more{
+      max-height: 5000px;
+    }
+  }
